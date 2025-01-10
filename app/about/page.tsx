@@ -4,62 +4,52 @@ import Link from 'next/link';
 // 发展历程数据
 const timeline = [
   {
-    year: '2024',
-    title: '全新里程碑',
-    description: '发布新一代金属3D打印设备，打印精度和效率大幅提升。',
-  },
-  {
-    year: '2023',
+    year: '2025-1月',
     title: '技术突破',
-    description: '自主研发的3D打印控制系统获得多项发明专利。',
+    description: '开发出全新工艺，可极大提高金属打印精度和致密度，实现高反金属的稳定成型。',
   },
   {
-    year: '2022',
-    title: '市场拓展',
-    description: '成功进入航空航天、医疗器械等高端制造领域。',
+    year: '2024-10',
+    title: '全新里程碑',
+    description: '自主研发的高精度金属3D打印设备顺利下线并投入使用。',
   },
   {
-    year: '2021',
-    title: '品质认证',
-    description: '通过ISO9001质量管理体系认证，获得多项行业资质。',
-  },
-  {
-    year: '2020',
-    title: '创新发展',
-    description: '建立研发中心，组建专业技术团队。',
-  },
-  {
-    year: '2019',
+    year: '2024-5',
     title: '企业成立',
-    description: '公司正式成立，致力于3D打印技术的研发与应用。',
+    description: '公司正式成立，致力于为工业界提供高效的设计与制造一体化解决方案。',
+  },
+  {
+    year: '2023-9',
+    title: '团队建立',
+    description: '数位行业经验丰富的工程师与高校博士一起组建了初创团队，开始了早期的科研成果转化。',
   },
 ];
 
 // 团队成员数据
 const team = [
   {
-    name: '张三',
-    role: '首席执行官',
-    description: '拥有20年制造业经验，曾任多家知名企业高管。',
+    name: 'Fei Wang',
+    role: '总经理',
+    description: '拥有多年3D打印科研与产业经验，曾师从3D打印行业泰斗级教授。',
     image: '/images/team/ceo.jpg',
   },
   {
-    name: '李四',
-    role: '技术总监',
-    description: '机械工程博士，在3D打印领域有多项发明专利。',
+    name: 'Michael Tsao',
+    role: '副总经理',
+    description: '曾就职于中国商飞，拥有深厚的设计与制造一体化工程经验。',
+    image: '/images/team/vice-general-manager.jpg',
+  },
+  {
+    name: 'Wenhao Xu',
+    role: 'CTO',
+    description: '上海交通大学博士后，在能源与3D打印领域拥有多年科研经验，为公司的产品研发与落地提供技术支持。',
     image: '/images/team/cto.jpg',
   },
   {
-    name: '王五',
-    role: '研发总监',
-    description: '材料学专家，曾主导多个重大技术项目。',
-    image: '/images/team/rd.jpg',
-  },
-  {
-    name: '赵六',
-    role: '市场总监',
-    description: '十年市场营销经验，精通行业发展趋势。',
-    image: '/images/team/marketing.jpg',
+    name: 'Arios Wang',
+    role: 'CFO',
+    description: '拥有多年投资与财务管理经验，为公司的财务管理与战略规划提供支持。',
+    image: '/images/team/cfo.jpg',
   },
 ];
 
@@ -76,7 +66,7 @@ const culture = [
   },
   {
     title: '愿景',
-    description: '成为全球领先的3D打印解决方案提供商。',
+    description: '成为全球领先的设计与制造解决方案提供商。',
     icon: (
       <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
@@ -85,7 +75,7 @@ const culture = [
   },
   {
     title: '价值观',
-    description: '创新、专注、协作、共赢。',
+    description: '让我们获得共同的发展与成功。',
     icon: (
       <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -103,7 +93,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tight sm:text-6xl">关于我们</h2>
             <p className="mt-6 text-lg leading-8">
-              致力于为工业制造提供先进的3D打印解决方案，推动制造业智能化转型升级。
+              致力于为工业场景提供先进的设计与3D打印解决方案，推动制造业智能化转型升级。
             </p>
           </div>
         </div>
@@ -114,12 +104,12 @@ export default function AboutPage() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">公司简介</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            我们是一家专注于3D打印技术研发与应用的高新技术企业，拥有自主知识产权的核心技术和完整的产品线。
-            通过持续创新和技术积累，我们为客户提供从设备、材料到解决方案的全方位服务。
+            我们是一家专注于创新3D打印的高科技企业，拥有自主知识产权的仿真设计平台和打印设备构成的完整产品线。
+            通过持续创新和技术积累，我们为客户提供从设计、材料到制造的完整解决方案。
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            公司汇聚了一批在3D打印、机械设计、材料科学等领域的专业人才，建立了完善的研发、生产、销售和服务体系。
-            我们的产品和服务已广泛应用于航空航天、医疗器械、汽车制造等高端制造领域。
+            公司汇聚了一批在3D打印、流体力学、机械设计、材料科学、人工智能等领域的专业人才，建立了完善的研发、生产、销售和服务体系。
+            我们的产品和服务已广泛应用于热管理、医疗器械、3C电子、eVTOL等高端制造领域。
           </p>
         </div>
       </div>
@@ -130,7 +120,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">企业文化</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              我们秉持创新、专注、协作、共赢的价值观，致力于为客户创造价值。
+              我们秉持以人为本、创新、专注的工程师文化，致力于为社会创造价值。
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -194,7 +184,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">管理团队</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              专业的团队是我们最宝贵的财富
+              优秀的工程师是我们最宝贵的财富
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -202,7 +192,13 @@ export default function AboutPage() {
               {team.map((member) => (
                 <div key={member.name} className="flex flex-col items-center">
                   <div className="relative h-40 w-40 overflow-hidden rounded-full">
-                    <div className="h-full w-full bg-gradient-to-br from-blue-400 to-blue-600" />
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={160}
+                      height={160}
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                   <h3 className="mt-6 text-lg font-semibold leading-7 tracking-tight text-gray-900">{member.name}</h3>
                   <p className="text-sm leading-6 text-blue-600">{member.role}</p>
@@ -221,7 +217,7 @@ export default function AboutPage() {
             加入我们，共创未来
           </h2>
           <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
-            我们期待优秀的人才加入，一起推动智能制造的发展
+            我们期待优秀的人才加入，一起推动智能设计与制造的发展
           </p>
           <div className="mt-8 flex justify-center gap-x-6">
             <Link

@@ -3,10 +3,9 @@ import Image from 'next/image';
 
 const navigation = {
   solutions: [
-    { name: '工业制造', href: '/solutions#manufacturing' },
+    { name: '消费电子', href: '/solutions#consumer' },
     { name: '医疗器械', href: '/solutions#medical' },
-    { name: '航空航天', href: '/solutions#aerospace' },
-    { name: '汽车工业', href: '/solutions#automotive' },
+    { name: '热管理', href: '/solutions#thermal' },
   ],
   support: [
     { name: '技术支持', href: '/support' },

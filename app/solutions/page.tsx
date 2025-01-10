@@ -4,41 +4,41 @@ import Link from 'next/link';
 // 行业解决方案数据
 const solutions = [
   {
-    id: 'aerospace',
-    name: '航空航天',
-    description: '为航空航天行业提供高性能金属3D打印解决方案，实现复杂零件的轻量化设计和快速制造。',
+    id: '消费电子',
+    name: '消费电子',
+    description: '为消费电子行业提供高效率的金属3D打印解决方案，实现诸如钛合金等难加工零件大批量制造。',
     benefits: [
-      '减重30-50%',
-      '零件整合度提升60%',
-      '生产周期缩短70%',
-      '成本降低40%',
+      '生产周期缩短50-70%',
+      '研发周期缩短100-200%',
+      '可实现钛合金部件的批量制造',
+      '部分零件可实现大幅成本降低',
     ],
     cases: [
       {
-        title: '发动机燃油喷嘴优化',
-        description: '通过3D打印技术重新设计燃油喷嘴，提升燃烧效率，降低燃料消耗。',
+        title: 'apple watch旋钮',
+        description: '通过高精度金属3D打印，实现apple watch旋钮的量产，减少了该部件的加工工序。',
       },
       {
-        title: '结构件轻量化设计',
-        description: '采用拓扑优化设计，在保证强度的同时大幅减轻零件重量。',
+        title: '点胶针',
+        description: '采用钨钢材质的点胶针内径小，加工难度大，高精度金属打印提供了新的行业解决方案。',
       },
     ],
-    image: '/images/aerospace.jpg', // 需要添加实际图片
+    image: '/images/applewatch.jpg', // 需要添加实际图片
   },
   {
     id: 'medical',
     name: '医疗器械',
-    description: '为医疗行业提供定制化的3D打印解决方案，实现医疗器械的个性化定制和快速生产。',
+    description: '为医疗器械中的精细复杂构建提供快速的加工解决方案，提高研发与生产效率，为医疗器械企业降本增效。',
     benefits: [
-      '个性化定制',
+      '极小件打印',
       '快速交付',
       '精度保证',
       '成本可控',
     ],
     cases: [
       {
-        title: '定制化手术导板',
-        description: '基于患者CT数据，快速打印个性化手术导板，提高手术精准度。',
+        title: '内窥镜复杂微小件批量生产',
+        description: '针对难以加工的金属微小件，完成高质量的快速成型，解决客户痛点。',
       },
       {
         title: '医疗器械原型验证',
@@ -48,26 +48,26 @@ const solutions = [
     image: '/images/medical.jpg', // 需要添加实际图片
   },
   {
-    id: 'automotive',
-    name: '汽车工业',
-    description: '为汽车行业提供从产品开发到生产制造的全流程3D打印解决方案。',
+    id: 'thermal',
+    name: '热管理',
+    description: '结合先进的CFD仿真，为热管理行业提供快速、高效的解决方案。',
     benefits: [
-      '快速原型验证',
-      '模具制造周期短',
+      '高性能流道设计',
+      '高精度仿真服务',
       '小批量生产灵活',
-      '设计优化便捷',
+      '快速原型验证',
     ],
     cases: [
       {
-        title: '复杂冷却水道模具',
-        description: '采用3D打印技术制造带有共形冷却水道的模具，提升生产效率。',
+        title: '拓扑优化散热板',
+        description: '采用拓扑优化技术，为散热板提供高性能的流道设计，提升散热效率。',
       },
       {
-        title: '功能性零件验证',
-        description: '快速打印功能性零件进行装配验证和性能测试。',
+        title: '吸水材料设计与制造',
+        description: '打印多孔吸水结构，为VC散热板等相变传热产品提供高效方案。',
       },
     ],
-    image: '/images/automotive.jpg', // 需要添加实际图片
+    image: '/images/thermal.jpg', // 需要添加实际图片
   },
 ];
 
@@ -96,8 +96,14 @@ export default function SolutionsPage() {
               }`}>
                 {/* 解决方案图片 */}
                 <div className="w-full lg:w-1/2">
-                  <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100">
-                    <div className="h-full w-full bg-gradient-to-br from-blue-400 to-blue-600" />
+                  <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+                    <Image
+                      src={solution.image}
+                      alt={solution.name}
+                      width={800}
+                      height={600}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
 

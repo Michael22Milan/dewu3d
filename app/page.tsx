@@ -4,7 +4,7 @@ import Link from 'next/link';
 // 产品数据
 const products = [
   {
-    name: '超高精度金属3D打印\nRa≤1.2微米',
+    name: '超高精度金属3D打印\nRa≤1.5微米',
     description: '自研超高精度金属打印设备，可成型壁厚低至30微米，为消费电子、航空航天、医疗器械等行业提供高精度、高性能的金属零部件制造解决方案。',
     href: '/products/metal',
     icon: (
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
           <div className="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
             {/* 视频播放区域 */}
-            <div className="relative w-[150%]" style={{ paddingBottom: '70%' }}>
+            <div className="relative w-[130%]" style={{ paddingBottom: '70%' }}>
               <video
                 className="absolute top-0 left-0 w-full h-full object-cover"
                 autoPlay
@@ -132,7 +132,7 @@ export default function Home() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">产品与服务</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            我们提供全方位的3D打印解决方案，满足您在不同场景下的需求
+            我们提供全方位的高性能设计与精密3D打印解决方案，满足您在不同场景下的需求
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

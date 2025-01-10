@@ -7,54 +7,54 @@ const news = [
     id: 1,
     title: '公司成功研发新一代金属3D打印设备',
     category: '公司新闻',
-    date: '2024-01-05',
-    description: '我司自主研发的新一代金属3D打印设备成功下线，打印精度提升50%，生产效率提高30%。',
+    date: '2024-10-10',
+    description: '我司自主研发的超高精度金属3D打印设备成功下线，打印精度提升500%。',
     image: '/images/news/printer.jpg',
     author: '技术部',
   },
   {
     id: 2,
-    title: '成功交付航空发动机关键零部件项目',
+    title: '成功交付精细医疗器械零部件项目',
     category: '项目案例',
-    date: '2024-01-03',
-    description: '为某航空发动机制造商成功交付一批关键零部件，获得客户高度认可。',
-    image: '/images/news/engine.jpg',
+    date: '2024-11-03',
+    description: '为某医疗器械厂商成功交付一批关键零部件，获得客户高度认可。',
+    image: '/images/news/yiliaoqixie.jpg',
     author: '项目部',
   },
   {
     id: 3,
-    title: '3D打印技术在医疗领域的最新应用',
+    title: '成功开发出金属多孔吸水基体',
     category: '行业动态',
-    date: '2024-01-02',
-    description: '3D打印技术在医疗器械、假体制造等领域的应用不断深入，带来革命性变革。',
-    image: '/images/news/medical.jpg',
+    date: '2024-12-02',
+    description: '使用独创的特殊工艺打印出金属多孔结构，为热管理领域带来变革。',
+    image: '/images/news/metalthermal.jpg',
     author: '市场部',
   },
   {
     id: 4,
-    title: '公司参加2024年工业制造展览会',
+    title: '为某车企提供IGBT散热板的拓扑优化流道设计与制造',
     category: '公司新闻',
-    date: '2023-12-28',
-    description: '我司携最新3D打印设备及解决方案参加展会，展示创新技术成果。',
-    image: '/images/news/exhibition.jpg',
+    date: '2024-12-28',
+    description: '技术团队通过自研的TO与CFD软件设计出高效的IGBT拓扑流道，并且快速制造完成了原型验证。',
+    image: '/images/news/TOCFD.jpg',
     author: '市场部',
   },
   {
     id: 5,
     title: '获得国家级高新技术企业认定',
     category: '公司新闻',
-    date: '2023-12-25',
+    date: '2025-1-6',
     description: '公司凭借强大的研发实力和创新能力，成功获得国家级高新技术企业认定。',
     image: '/images/news/award.jpg',
     author: '行政部',
   },
   {
     id: 6,
-    title: '3D打印在汽车制造中的应用趋势',
+    title: '3D打印在eVTOL领域的应用趋势',
     category: '行业动态',
-    date: '2023-12-20',
-    description: '探讨3D打印技术如何改变传统汽车制造流程，带来效率提升。',
-    image: '/images/news/automotive.jpg',
+    date: '2025-1-10',
+    description: '探讨设计与制造一体化技术如何改变eVTOL行业的设计与制造流程，带来效率提升。',
+    image: '/images/news/evtol.jpg',
     author: '研发部',
   },
 ];
@@ -106,8 +106,14 @@ export default function NewsPage() {
           {news.map((article) => (
             <article key={article.id} className="flex flex-col items-start">
               <div className="relative w-full">
-                <div className="aspect-[16/9] w-full rounded-2xl bg-gray-100 sm:aspect-[2/1] lg:aspect-[3/2]">
-                  <div className="h-full w-full bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl" />
+                <div className="aspect-[16/9] w-full rounded-2xl sm:aspect-[2/1] lg:aspect-[3/2]">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    width={800}
+                    height={600}
+                    className="h-full w-full object-cover rounded-2xl"
+                  />
                 </div>
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
               </div>

@@ -5,37 +5,36 @@ import Link from 'next/link';
 const products = [
   {
     id: 'metal',
-    name: '金属3D打印系统',
-    description: '采用先进的选区激光熔化技术（SLM），可以生产高密度、高精度的金属零件。适用于航空航天、医疗器械、汽车制造等高端制造领域。',
+    name: '高精度金属3D打印设备',
+    description: '自主研发的先进选区激光熔化技术（SLM），成型公差10μm以内、Ra最低可至1μm。适用于消费电子航空航天、医疗器械、人形机器人等高端制造领域。',
     features: [
-      '高精度：可达±0.1mm',
-      '多材料：支持钛合金、铝合金、不锈钢等',
-      '大尺寸：最大成型尺寸500×500×500mm',
-      '高效率：双激光扫描系统',
+      '高光洁度：Ra≤1.5μm',
+      '高精度：可成型壁厚低至30μm',
+      '成型尺寸：最大成型尺寸100×100×200mm',
+      '高致密度：≥99.9%',
     ],
     image: '/images/metal-printer.jpg', // 需要添加实际图片
   },
   {
     id: 'polymer',
-    name: '工业级聚合物3D打印机',
-    description: '采用FDM技术，可以快速生产功能性零件和原型。适用于工业设计、产品开发和小批量生产。',
+    name: '多材料金属打印服务',
+    description: '独创的多材料铺粉工艺，满足两种及以上金属粉末一体成型。适用于航空航天、核能等极端工况场景。',
     features: [
-      '稳定性高：封闭式恒温腔体',
-      '材料多样：支持ABS、PC、PEEK等工程塑料',
-      '智能化：全自动调平系统',
-      '易操作：7寸彩色触摸屏',
+      '铺粉质量好：不存在铺粉不均匀的问题',
+      '材料多样：支持铜、不锈钢、铝合金、高温合金等各种金属粉末材料',
+      '易操作：更换或添加粉末高效便捷',
     ],
     image: '/images/polymer-printer.jpg', // 需要添加实际图片
   },
   {
     id: 'software',
-    name: '3D打印控制软件',
-    description: '自主研发的3D打印控制系统，提供从模型处理到打印控制的全流程解决方案。',
+    name: 'CAx软件',
+    description: '自主研发的拓扑优化、仿真和打印控制软件，提供从模型设计到制造的全流程解决方案。',
     features: [
-      '智能切片：自动优化打印参数',
-      '远程监控：实时查看打印状态',
-      '数据分析：打印质量追溯',
-      '集群管理：多设备统一调度',
+      '拓扑优化：具备材料各项异性的优化功能',
+      '仿真分析：自研高精度、大规模并行CFD求解器',
+      '过程监控：基于机器学习方法构建的打印监控与预测系统',
+      '集群管理：可实现多设备统一调度',
     ],
     image: '/images/software.jpg', // 需要添加实际图片
   },
@@ -68,8 +67,14 @@ export default function ProductsPage() {
             >
               {/* 产品图片 */}
               <div className="w-full lg:w-1/2">
-                <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100">
-                  <div className="h-full w-full bg-gradient-to-br from-blue-400 to-blue-600" />
+                <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
